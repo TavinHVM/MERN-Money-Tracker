@@ -5,9 +5,27 @@ function App() {
   const [name, setName] = useState("");
   const [datetime, setDatetime] = useState("");
   const [description, setDescription] = useState("");
-  function addNewTransaction() {
-    const url = "";
-    fetch(url);
+
+  function addNewTransaction(ev) {
+    ev.preventDefault();
+    const url = process.env.REACT_APP_API_URL + "/transaction";
+    const price = name.split(" ")[0];
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        price,
+        name:name.substring(price.length+1),
+        datetime,
+        description,
+      }),
+    }).then(response => {
+      response.json().then(json => {
+        console.log("result", json);
+      });
+    });
   }
 
   return (
