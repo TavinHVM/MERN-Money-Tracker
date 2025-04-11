@@ -1,20 +1,43 @@
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [name, setName] = useState("");
+  const [datetime, setDatetime] = useState("");
+  const [description, setDescription] = useState("");
+  function addNewTransaction() {
+    const url = "";
+    fetch(url);
+  }
+
   return (
     <main>
       <h1>
         $400<span>.00</span>
       </h1>
 
-      <form>
+      <form onSubmit={addNewTransaction}>
         <div className="basic">
-          <input type="text" placeholder="Enter the product name" />
-          <input type="datetime-local" />
+          <input
+            type="text"
+            value={name}
+            onChange={(ev) => setName(ev.target.value)}
+            placeholder="Enter the product name"
+          />
+          <input
+            type="datetime-local"
+            value={datetime}
+            onChange={(ev) => setDatetime(ev.target.value)}
+          />
         </div>
 
         <div className="description">
-          <input type="text" placeholder="Enter the description" />
+          <input
+            type="text"
+            placeholder="Enter the description"
+            value={description}
+            onChange={(ev) => setDescription(ev.target.value)}
+          />
         </div>
 
         <button typeof="submit">Add new transaction</button>
