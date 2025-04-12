@@ -5,9 +5,9 @@ Um aplicativo de rastreamento de finanças pessoais desenvolvido com React, Node
 O Money Tracker é um aplicativo web que permite aos usuários acompanhar suas finanças pessoais de forma fácil e eficiente. Com uma interface intuitiva e responsiva, o aplicativo permite que os usuários gerenciem transações financeiras, além de visualizar um resumo das suas finanças.
 
 # Tecnologias utilizadas
-## Front-end: React, HTML, CSS, JavaScript
-## Back-end: Node.js, Express.js, MongoDB
-## Banco de dados: MongoDB
+Front-end: React, HTML, CSS, JavaScript
+Back-end: Node.js, Express.js, MongoDB
+Banco de dados: MongoDB
 
 # Funcionalidades
 Adicionar transações financeiras
