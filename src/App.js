@@ -74,7 +74,6 @@ function App() {
         setDescription("");
         playClickSound();
 
-        // Atualiza as transações na tela
         fetchAndFormatTransactions();
         console.log("result", json);
       } else {

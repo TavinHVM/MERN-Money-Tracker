@@ -1,0 +1,3 @@
+inicializar localhost: yarn start
+startar api: node index.js
+monitorar api: nodemon index.js
