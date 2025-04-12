@@ -14,8 +14,17 @@ main {
 
 h1 {
   text-align: center;
-  color: #fff;
   margin: 0;
+  font-size: 3.5rem;
+}
+
+h1 span {
+  font-size: 2rem;
+}
+
+h1 span.currency {
+  font-size: 3.5rem;
+  color: #eec53f;
 }
 
 form {
@@ -47,7 +56,12 @@ form button {
   border: none;
   padding: 9px;
   border-radius: 5px;
-  background-color: #ddd;
+  background-color: #eee;
+  transition: background-color 0.2s;
+}
+
+form button:hover {
+  background-color: #bdbdbd;
 }
 
 div.transactions {

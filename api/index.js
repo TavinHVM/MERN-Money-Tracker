@@ -20,6 +20,12 @@ app.post("/api/transaction", async(req, res) => {
   res.json(transaction);
 });
 
+app.get("/api/transactions", async(req, res) => {
+  await mongoose.connect(process.env.MONGO_URL);
+  const transactions = await Transaction.find({}).sort({ datetime: -1 });
+  res.json(transactions);
+});
+
 app.listen(4000, () => {
-  console.log("Server is running on http://localhost:4000");
+  console.log("Server is running!");
 });
